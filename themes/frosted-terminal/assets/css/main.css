@@ -1,8 +1,14 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-hacker-green: #00ff41;
   --color-terminal-black: #0d0d0d;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 @layer components {
@@ -12,5 +18,9 @@
   
   .terminal-text {
     @apply font-mono text-hacker-green;
+  }
+
+  .cursor-blink {
+    animation: blink 1s step-end infinite;
   }
 }

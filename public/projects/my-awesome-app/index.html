@@ -23,18 +23,100 @@
 
 </head>
 <body class="bg-terminal-black text-white selection:bg-hacker-green selection:text-black min-h-screen bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-900 via-terminal-black to-terminal-black">
+  
+  <div class="fixed top-8 left-8 z-50 pointer-events-none">
+    <div class="w-2.5 h-5 bg-hacker-green cursor-blink"></div>
+  </div>
+  
+
   <main>
     
-  <h1>Project: Nebula Optimizer</h1>
+<article class="max-w-4xl mx-auto py-24 px-4 font-mono">
+  <div class="mb-12">
+    <a href="/" class="text-hacker-green text-sm hover:underline flex items-center gap-2 mb-8 group">
+      <span class="opacity-0 group-hover:opacity-100 transition-opacity">➜</span>
+      <span class="text-white/40">cd ..</span>
+    </a>
+    
+    <div class="mb-16">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">Project: Nebula Optimizer</h1>
+      
+      
+
+      
+
+      
+      <div class="mb-6">
+        
+        <a href="https://github.com/levifackler/nebula" target="_blank" class="inline-flex items-center gap-2 text-hacker-green/80 hover:text-hacker-green transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          View source
+        </a>
+        
+      </div>
+      
+
+      <div class="flex flex-wrap items-center gap-4 text-white/40 text-sm mb-8">
+        <span>LAST_MODIFIED: 2024-04-21</span>
+        <span>•</span>
+        <div class="flex flex-wrap gap-2">
+          
+          
+          <span class="text-xs font-mono text-white/40">Rust</span>
+          
+          
+          
+          <span class="text-xs font-mono text-white/40">WASM</span>
+          
+          
+          
+          <span class="text-xs font-mono text-white/40">Tokio</span>
+          
+          
+        </div>
+      </div>
+
+      <div class="prose prose-invert max-w-none prose-p:text-white/80 prose-headings:text-white prose-strong:text-hacker-green prose-a:text-hacker-green hover:prose-a:underline font-mono">
+        <p>Nebula is my passion project. I built it to explore the limits of memory safety and concurrency in Rust. It&rsquo;s now used by several open-source data pipelines.</p>
+
+      </div>
+    </div>
+  </div>
 
   
-  
-  <time datetime="2024-04-21T15:53:05&#43;00:00">April 21, 2024</time>
+</article>
 
-  <p>Nebula is my passion project. I built it to explore the limits of memory safety and concurrency in Rust. It&rsquo;s now used by several open-source data pipelines.</p>
 
-  
+<div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden items-center justify-center p-4 md:p-12 backdrop-blur-2xl transition-all duration-300 opacity-0" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" class="max-w-full max-h-full rounded-lg shadow-2xl scale-90 transition-transform duration-300">
+  <button class="absolute top-8 right-8 text-white/60 hover:text-white transition-colors" onclick="closeLightbox()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
 
+<script>
+function openLightbox(src) {
+  const lightbox = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  lightbox.classList.remove('hidden');
+  lightbox.classList.add('flex');
+  setTimeout(() => {
+    lightbox.classList.add('opacity-100');
+    img.classList.add('scale-100');
+  }, 10);
+}
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  lightbox.classList.remove('opacity-100');
+  img.classList.remove('scale-100');
+  setTimeout(() => {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+  }, 300);
+}
+</script>
 
   </main>
   
