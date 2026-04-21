@@ -18,6 +18,12 @@
           <span class="text-hacker-green">Distributed_Systems</span>
           <span class="text-hacker-green">Rust/Go</span>
         </p>
+        <p class="mb-2"><span class="text-blue-400">➜</span> <span class="text-white">~</span> ls certs/</p>
+        <p class="mb-4 flex flex-wrap gap-x-4">
+          <span class="text-hacker-green">CompTIA_A+_ce</span>
+          <span class="text-hacker-green">CompTIA_Security+_ce</span>
+          <span class="text-hacker-green">ISC2_CC</span>
+        </p>
         <p class="mb-2"><span class="text-blue-400">➜</span> <span class="text-white">~</span> <span id="cursor" class="animate-pulse">_</span></p>
       </div>
     </div>
@@ -40,7 +46,13 @@
     {{ range where site.RegularPages "Section" "experience" }}
     <div class="group">
       <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
-        <span class="text-white/40 font-mono text-sm">{{ .Date.Format "2006" }}</span>
+        <span class="text-white/40 font-mono text-sm whitespace-nowrap">
+          {{ if .Params.start_date }}
+            {{ .Params.start_date }} — {{ if .Params.end_date }}{{ .Params.end_date }}{{ else }}Present{{ end }}
+          {{ else }}
+            {{ .Date.Format "2006" }}
+          {{ end }}
+        </span>
         <div>
           <h3 class="text-xl font-bold group-hover:text-hacker-green transition-colors">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -65,10 +77,51 @@
   </h2>
   
   <div class="space-y-12">
-    {{ range where site.RegularPages "Section" "education" }}
+    {{ range (where site.RegularPages "Section" "education").ByDate.Reverse }}
     <div class="group">
       <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
-        <span class="text-white/40 font-mono text-sm">{{ .Date.Format "2006" }}</span>
+        <span class="text-white/40 font-mono text-sm whitespace-nowrap">
+          {{ if .Params.start_date }}
+            {{ .Params.start_date }} — {{ if .Params.end_date }}{{ .Params.end_date }}{{ else }}Present{{ end }}
+          {{ else }}
+            {{ .Date.Format "2006" }}
+          {{ end }}
+        </span>
+        <div>
+          <h3 class="text-xl font-bold group-hover:text-hacker-green transition-colors">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+          <p class="text-hacker-green/80 font-mono text-sm mt-1">{{ .Params.institution }} | {{ .Params.location }}</p>
+          <p class="mt-2 text-white/60 leading-relaxed max-w-2xl">{{ .Params.blurb }}</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            {{ range .Params.technologies_used }}
+            <span class="px-2 py-1 text-xs font-mono bg-hacker-green/10 text-hacker-green rounded">{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<section id="certifications" class="py-24 px-4 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-mono mb-12 flex items-center gap-4">
+    <span class="text-hacker-green">03.</span> Certifications
+    <div class="h-px bg-white/10 flex-grow"></div>
+  </h2>
+  
+  <div class="space-y-12">
+    {{ range (where site.RegularPages "Section" "certifications").ByDate.Reverse }}
+    <div class="group">
+      <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
+        <span class="text-white/40 font-mono text-sm whitespace-nowrap">
+          {{ if .Params.start_date }}
+            {{ .Params.start_date }} — {{ if .Params.end_date }}{{ .Params.end_date }}{{ else }}Present{{ end }}
+          {{ else }}
+            {{ .Date.Format "2006" }}
+          {{ end }}
+        </span>
         <div>
           <h3 class="text-xl font-bold group-hover:text-hacker-green transition-colors">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -89,7 +142,7 @@
 
 <section id="projects" class="py-24 px-4 max-w-5xl mx-auto mb-32">
   <h2 class="text-3xl font-mono mb-12 flex items-center gap-4">
-    <span class="text-hacker-green">03.</span> Projects
+    <span class="text-hacker-green">04.</span> Projects
     <div class="h-px bg-white/10 flex-grow"></div>
   </h2>
   

@@ -16,11 +16,18 @@
       <description>&lt;h2 id=&#34;it-specialist&#34;&gt;IT Specialist&lt;/h2&gt;&#xA;&lt;h4 id=&#34;sep_2024--jun_2025&#34;&gt;Sep_2024 &amp;hellip; Jun_2025&lt;/h4&gt;&#xA;&lt;p&gt;As the IT Specialist my primary duties revolved around desktop support.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Installed and Imaged 30 new PCs to facilitate an upgrade from Windows 10 to Windows 11.&lt;/li&gt;&#xA;&lt;li&gt;Administered Portico (Core Banking) product for all staff.&lt;/li&gt;&#xA;&lt;li&gt;Onboarded and Offboarded users for AD and all software systems.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;What happens if I write text outside the lines?&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Senior Software Engineer @ Google</title>
-      <link>http://localhost:1313/experience/google/</link>
-      <pubDate>Sun, 21 Apr 2024 15:53:05 +0000</pubDate>
-      <guid>http://localhost:1313/experience/google/</guid>
-      <description>&lt;p&gt;At Google, I worked on scaling the unscalable. My focus was on optimizing low-latency services and ensuring high availability across global regions.&lt;/p&gt;</description>
+      <title>Textron Systems</title>
+      <link>http://localhost:1313/experience/textron-systems/</link>
+      <pubDate>Fri, 01 Mar 2024 12:12:00 -0400</pubDate>
+      <guid>http://localhost:1313/experience/textron-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MAG Aerospace</title>
+      <link>http://localhost:1313/experience/mag-aerospace/</link>
+      <pubDate>Tue, 01 Mar 2022 12:12:12 -0400</pubDate>
+      <guid>http://localhost:1313/experience/mag-aerospace/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

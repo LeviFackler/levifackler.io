@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/education/amu/</loc>
-    <lastmod>2026-04-21T12:19:26-04:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/education/</loc>
-    <lastmod>2026-04-21T12:19:26-04:00</lastmod>
+    <lastmod>2026-04-21T15:26:39-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-04-21T12:19:26-04:00</lastmod>
+    <lastmod>2026-04-21T15:26:39-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/education/wgu/</loc>
+    <lastmod>2026-04-21T15:26:39-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/experience/</loc>
     <lastmod>2026-04-21T12:11:45-04:00</lastmod>
@@ -17,23 +17,32 @@
     <loc>http://localhost:1313/experience/family-first/</loc>
     <lastmod>2026-04-21T12:11:45-04:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/education/cc/</loc>
+    <lastmod>2026-02-01T15:27:08-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/education/emerson/</loc>
+    <lastmod>2025-08-01T15:26:46-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/education/security&#43;/</loc>
+    <lastmod>2024-07-01T15:27:17-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/education/a&#43;/</loc>
+    <lastmod>2024-05-01T15:27:22-04:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/projects/my-awesome-app/</loc>
     <lastmod>2024-04-21T15:53:05+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/</loc>
     <lastmod>2024-04-21T15:53:05+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experience/google/</loc>
-    <lastmod>2024-04-21T15:53:05+00:00</lastmod>
+    <loc>http://localhost:1313/experience/textron-systems/</loc>
+    <lastmod>2024-03-01T12:12:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/education/aws-certification/</loc>
-    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/experience/mag-aerospace/</loc>
+    <lastmod>2022-03-01T12:12:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/education/full-stack-web-dev/</loc>
-    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/education/sample-degree/</loc>
-    <lastmod>2018-05-15T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/education/amu/</loc>
+    <lastmod>2021-12-30T12:19:26-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
