@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="max-w-5xl mx-auto py-24 px-4">
+  <h1 class="text-4xl md:text-6xl font-bold mb-12 font-mono flex items-center gap-4">
+    <span class="text-hacker-green">></span> {{ .Title }}
+  </h1>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {{ range .Pages }}
+    <a href="{{ .Permalink }}" class="glass p-8 rounded-xl block group hover:-translate-y-2 transition-all">
+      <div class="flex justify-between items-start mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-hacker-green w-8 h-8"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <h3 class="text-xl font-bold mb-2 group-hover:text-hacker-green transition-colors">{{ .Title }}</h3>
+      <p class="text-white/60 text-sm mb-6">{{ .Params.blurb }}</p>
+      <div class="flex flex-wrap gap-2">
+        {{ range .Params.technologies_used }}
+        <span class="text-xs font-mono text-white/40">{{ . }}</span>
+        {{ end }}
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

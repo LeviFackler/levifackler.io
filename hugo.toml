@@ -1,0 +1,16 @@
+baseURL = 'https://levifackler.io/'
+languageCode = 'en-us'
+title = 'Levi Fackler | Hacker-Chic Resume'
+theme = 'frosted-terminal'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNoNums = false
+    lineNumbersInTable = true
+    noClasses = false
+    style = 'monokai'

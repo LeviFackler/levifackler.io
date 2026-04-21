@@ -1,0 +1,118 @@
+{{ define "main" }}
+<section class="min-h-screen flex flex-col items-center justify-center px-4">
+  <div class="max-w-3xl w-full glass rounded-lg overflow-hidden shadow-2xl">
+    <div class="bg-white/5 px-4 py-2 flex gap-2 items-center border-b border-white/10">
+      <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+      <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+      <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+      <span class="ml-2 text-xs font-mono text-white/40">levi@fackler.io: ~</span>
+    </div>
+    <div class="p-6 font-mono text-sm md:text-base leading-relaxed">
+      <div id="terminal-content" class="terminal-text">
+        <p class="mb-2"><span class="text-blue-400">➜</span> <span class="text-white">~</span> whoami</p>
+        <p class="mb-4 text-white/80">Levi Fackler. Senior Software Engineer. Architect. Storyteller.</p>
+        <p class="mb-2"><span class="text-blue-400">➜</span> <span class="text-white">~</span> ls skills/</p>
+        <p class="mb-4 flex flex-wrap gap-x-4">
+          <span class="text-hacker-green">Infrastructure</span>
+          <span class="text-hacker-green">Backend</span>
+          <span class="text-hacker-green">Distributed_Systems</span>
+          <span class="text-hacker-green">Rust/Go</span>
+        </p>
+        <p class="mb-2"><span class="text-blue-400">➜</span> <span class="text-white">~</span> <span id="cursor" class="animate-pulse">_</span></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-12 animate-bounce">
+    <a href="#experience" class="text-white/40 hover:text-white transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 13 5 5 5-5"/><path d="m7 6 5 5 5-5"/></svg>
+    </a>
+  </div>
+</section>
+
+<section id="experience" class="py-24 px-4 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-mono mb-12 flex items-center gap-4">
+    <span class="text-hacker-green">01.</span> Experience
+    <div class="h-px bg-white/10 flex-grow"></div>
+  </h2>
+  
+  <div class="space-y-12">
+    {{ range where site.RegularPages "Section" "experience" }}
+    <div class="group">
+      <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
+        <span class="text-white/40 font-mono text-sm">{{ .Date.Format "2006" }}</span>
+        <div>
+          <h3 class="text-xl font-bold group-hover:text-hacker-green transition-colors">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+          <p class="mt-2 text-white/60 leading-relaxed max-w-2xl">{{ .Params.blurb }}</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            {{ range .Params.technologies_used }}
+            <span class="px-2 py-1 text-xs font-mono bg-hacker-green/10 text-hacker-green rounded">{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<section id="education" class="py-24 px-4 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-mono mb-12 flex items-center gap-4">
+    <span class="text-hacker-green">02.</span> Education
+    <div class="h-px bg-white/10 flex-grow"></div>
+  </h2>
+  
+  <div class="space-y-12">
+    {{ range where site.RegularPages "Section" "education" }}
+    <div class="group">
+      <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
+        <span class="text-white/40 font-mono text-sm">{{ .Date.Format "2006" }}</span>
+        <div>
+          <h3 class="text-xl font-bold group-hover:text-hacker-green transition-colors">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+          <p class="text-hacker-green/80 font-mono text-sm mt-1">{{ .Params.institution }} | {{ .Params.location }}</p>
+          <p class="mt-2 text-white/60 leading-relaxed max-w-2xl">{{ .Params.blurb }}</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            {{ range .Params.technologies_used }}
+            <span class="px-2 py-1 text-xs font-mono bg-hacker-green/10 text-hacker-green rounded">{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<section id="projects" class="py-24 px-4 max-w-5xl mx-auto mb-32">
+  <h2 class="text-3xl font-mono mb-12 flex items-center gap-4">
+    <span class="text-hacker-green">03.</span> Projects
+    <div class="h-px bg-white/10 flex-grow"></div>
+  </h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {{ range where site.RegularPages "Section" "projects" }}
+    <a href="{{ .Permalink }}" class="glass p-8 rounded-xl block group hover:-translate-y-2 transition-all">
+      <div class="flex justify-between items-start mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-hacker-green w-8 h-8"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        {{ with .Params.github_link }}
+        <div class="text-white/40 group-hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        </div>
+        {{ end }}
+      </div>
+      <h3 class="text-xl font-bold mb-2">{{ .Title }}</h3>
+      <p class="text-white/60 text-sm mb-6">{{ .Params.blurb }}</p>
+      <div class="flex flex-wrap gap-2">
+        {{ range .Params.technologies_used }}
+        <span class="text-xs font-mono text-white/40">{{ . }}</span>
+        {{ end }}
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

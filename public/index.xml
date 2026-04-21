@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Levi Fackler | Hacker-Chic Resume</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Levi Fackler | Hacker-Chic Resume</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Apr 2026 12:19:26 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>American Military University</title>
+      <link>http://localhost:1313/education/amu/</link>
+      <pubDate>Tue, 21 Apr 2026 12:19:26 -0400</pubDate>
+      <guid>http://localhost:1313/education/amu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Family First Credit Union</title>
+      <link>http://localhost:1313/experience/family-first/</link>
+      <pubDate>Tue, 21 Apr 2026 12:11:45 -0400</pubDate>
+      <guid>http://localhost:1313/experience/family-first/</guid>
+      <description>&lt;p&gt;What happens if I write text outside the lines?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project: Nebula Optimizer</title>
+      <link>http://localhost:1313/projects/my-awesome-app/</link>
+      <pubDate>Sun, 21 Apr 2024 15:53:05 +0000</pubDate>
+      <guid>http://localhost:1313/projects/my-awesome-app/</guid>
+      <description>&lt;p&gt;Nebula is my passion project. I built it to explore the limits of memory safety and concurrency in Rust. It&amp;rsquo;s now used by several open-source data pipelines.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Senior Software Engineer @ Google</title>
+      <link>http://localhost:1313/experience/google/</link>
+      <pubDate>Sun, 21 Apr 2024 15:53:05 +0000</pubDate>
+      <guid>http://localhost:1313/experience/google/</guid>
+      <description>&lt;p&gt;At Google, I worked on scaling the unscalable. My focus was on optimizing low-latency services and ensuring high availability across global regions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AWS Certified Solutions Architect – Associate</title>
+      <link>http://localhost:1313/education/aws-certification/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/education/aws-certification/</guid>
+      <description>&lt;p&gt;Passed with a high score.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Full-Stack Web Development Bootcamp</title>
+      <link>http://localhost:1313/education/full-stack-web-dev/</link>
+      <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/education/full-stack-web-dev/</guid>
+      <description>&lt;p&gt;Built several projects including a task manager and a social media clone.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bachelor of Science in Computer Science</title>
+      <link>http://localhost:1313/education/sample-degree/</link>
+      <pubDate>Tue, 15 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/education/sample-degree/</guid>
+      <description>&lt;p&gt;I took some very difficult classes here.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

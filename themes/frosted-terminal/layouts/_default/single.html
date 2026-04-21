@@ -1,0 +1,59 @@
+{{ define "main" }}
+<article class="max-w-4xl mx-auto py-24 px-4">
+  <div class="mb-12">
+    <a href="/" class="text-hacker-green font-mono text-sm hover:underline flex items-center gap-2 mb-8">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      Back to Terminal
+    </a>
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">{{ .Title }}</h1>
+    {{ if eq .Section "education" }}
+    <div class="text-hacker-green font-mono mb-4">
+      {{ .Params.institution }} | {{ .Params.location }}
+    </div>
+    {{ end }}
+    <div class="flex flex-wrap items-center gap-4 text-white/40 font-mono text-sm">
+      <span>{{ .Date.Format "January 2006" }}</span>
+      <span>•</span>
+      <div class="flex gap-2">
+        {{ range .Params.technologies_used }}
+        <span class="text-hacker-green/80">#{{ . }}</span>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <div class="prose prose-invert max-w-none">
+    {{ .Content }}
+  </div>
+
+  {{ with .Params.images }}
+  <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-4">
+    {{ range . }}
+    <div class="relative group cursor-pointer overflow-hidden rounded-xl glass aspect-video" onclick="openLightbox('{{ . | absURL }}')">
+      <img src="{{ . | absURL }}" alt="Project Screenshot" class="object-cover w-full h-full transition-transform group-hover:scale-105">
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+</article>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden items-center justify-center p-4 backdrop-blur-xl" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" class="max-w-full max-h-full rounded-lg shadow-2xl">
+</div>
+
+<script>
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.remove('hidden');
+  document.getElementById('lightbox').classList.add('flex');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.add('hidden');
+  document.getElementById('lightbox').classList.remove('flex');
+}
+</script>
+{{ end }}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Educations on Levi Fackler | Hacker-Chic Resume</title>
+    <link>http://localhost:1313/education/</link>
+    <description>Recent content in Educations on Levi Fackler | Hacker-Chic Resume</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Apr 2026 12:19:26 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/education/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>American Military University</title>
+      <link>http://localhost:1313/education/amu/</link>
+      <pubDate>Tue, 21 Apr 2026 12:19:26 -0400</pubDate>
+      <guid>http://localhost:1313/education/amu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS Certified Solutions Architect – Associate</title>
+      <link>http://localhost:1313/education/aws-certification/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/education/aws-certification/</guid>
+      <description>&lt;p&gt;Passed with a high score.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Full-Stack Web Development Bootcamp</title>
+      <link>http://localhost:1313/education/full-stack-web-dev/</link>
+      <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/education/full-stack-web-dev/</guid>
+      <description>&lt;p&gt;Built several projects including a task manager and a social media clone.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bachelor of Science in Computer Science</title>
+      <link>http://localhost:1313/education/sample-degree/</link>
+      <pubDate>Tue, 15 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/education/sample-degree/</guid>
+      <description>&lt;p&gt;I took some very difficult classes here.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
