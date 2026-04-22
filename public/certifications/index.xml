@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Certifications on Levi Fackler | Hacker-Chic Resume</title>
+    <link>http://localhost:1313/certifications/</link>
+    <description>Recent content in Certifications on Levi Fackler | Hacker-Chic Resume</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Feb 2026 15:27:08 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/certifications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ISC2 | CC</title>
+      <link>http://localhost:1313/certifications/isc2-cc/</link>
+      <pubDate>Sun, 01 Feb 2026 15:27:08 -0400</pubDate>
+      <guid>http://localhost:1313/certifications/isc2-cc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CompTIA Security&#43; ce</title>
+      <link>http://localhost:1313/certifications/comptia-security-plus/</link>
+      <pubDate>Mon, 01 Jul 2024 15:27:17 -0400</pubDate>
+      <guid>http://localhost:1313/certifications/comptia-security-plus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CompTIA A&#43; ce</title>
+      <link>http://localhost:1313/certifications/comptia-a-plus/</link>
+      <pubDate>Wed, 01 May 2024 15:27:22 -0400</pubDate>
+      <guid>http://localhost:1313/certifications/comptia-a-plus/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
