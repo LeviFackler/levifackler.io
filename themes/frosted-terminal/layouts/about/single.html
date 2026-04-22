@@ -1,0 +1,36 @@
+{{ define "main" }}
+<article class="max-w-4xl mx-auto py-24 px-4 font-mono">
+  <div class="mb-12">
+    <a href="/" class="text-hacker-green text-sm hover:underline flex items-center gap-2 mb-12 group">
+      <span class="opacity-0 group-hover:opacity-100 transition-opacity">➜</span>
+      <span class="text-white/40">cd ..</span>
+    </a>
+    
+    <!-- Image at the front top center -->
+    <div class="flex flex-col items-center mb-16">
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-hacker-green/20 to-blue-500/20 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+        <div class="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-white/20 shadow-2xl glass">
+          {{ if .Params.photo }}
+            <img src="{{ .Params.photo | absURL }}" alt="{{ .Title }}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+          {{ else }}
+            <div class="w-full h-full flex items-center justify-center bg-white/5 text-white/20">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mt-8 mb-4 text-white text-center">{{ .Title }}</h1>
+      {{ with .Params.blurb }}
+      <p class="text-hacker-green text-lg font-mono text-center">{{ . }}</p>
+      {{ end }}
+    </div>
+
+    <div class="glass p-8 md:p-12 rounded-2xl">
+      <div class="prose prose-invert max-w-none prose-p:text-white/80 prose-headings:text-white prose-strong:text-hacker-green prose-a:text-hacker-green hover:prose-a:underline font-mono leading-relaxed text-base md:text-lg">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</article>
+{{ end }}

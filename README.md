@@ -23,6 +23,11 @@ To add a new degree or certification:
 hugo new content education/institution-name/index.md --kind education
 ```
 
+### 4. Updating the About Me Page
+The About Me page is located at `content/about-me/index.md`. It uses a special template that highlights a personal profile picture.
+*   **Profile Picture:** Place your photo at `static/img/me.jpg`.
+*   **Template:** This page uses the `about` layout (`themes/frosted-terminal/layouts/about/single.html`).
+
 ---
 
 ## 📝 Required Front Matter Fields
@@ -33,9 +38,10 @@ Each `index.md` file must contain the following fields in the header (YAML):
 | :--- | :--- | :--- |
 | `title` | The display title (Role, Project, or Degree) | `"Senior Engineer @ Google"` |
 | `date` | Used for sorting (Latest first) | `2024-04-21` |
-| `institution`| (Education Only) The school or platform. | `"State University"` |
-| `location` | (Education Only) The city/state or "Remote". | `"Springfield, IL"` |
-| `blurb` | **Crucial:** Short 1-2 sentence summary for the landing page cards. | `"Architected a Rust-based data engine..."` |
+| `photo` | (About Me Only) Path to your profile image. | `"/img/me.jpg"` |
+| `institution`| (Education/Certs Only) The school or platform. | `"State University"` |
+| `location` | (Education/Certs Only) The city/state or "Remote". | `"Springfield, IL"` |
+| `blurb` | **Crucial:** Short summary for cards or page subtitles. | `"Architected a Rust-based data engine..."` |
 | `technologies_used` | A list of tags displayed on the cards. | `["Rust", "Go", "AWS"]` |
 | `github_link` | (Projects Only) Link to the repository. | `"https://github.com/..."` |
 | `images` | List of image filenames in the same folder for the Lightbox. | `["screenshot1.png"]` |
