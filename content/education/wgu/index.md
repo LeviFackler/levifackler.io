@@ -1,11 +1,11 @@
 ---
-title: "Western Governor's University"
+title: "MSCISA | Master of Science in Cybersecurity and Information Assurance"
 date: 2026-04-21T15:26:39-04:00
 start_date: "jan_2026"
 end_date: ""
 institution: "Western Governor's University"
 location: "remote"
-blurb: "MSCSIA | Master of Science in Cybersecurity and Information Assurance"
+blurb: ""
 technologies_used: []
 images: []
 draft: false
