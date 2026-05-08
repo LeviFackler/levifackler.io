@@ -14,3 +14,6 @@ theme = 'frosted-terminal'
     lineNumbersInTable = true
     noClasses = false
     style = 'monokai'
+
+[security.node]
+  disable = true
