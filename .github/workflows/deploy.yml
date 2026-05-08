@@ -1,4 +1,4 @@
-name: Deploy Hugo Site
+name: Deploy Pre-built Static Site
 
 on:
   push:
@@ -10,42 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           submodules: true
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'npm'
-
-      - name: Install dependencies + Force LightningCSS Linux binary
-        run: |
-          rm -rf node_modules package-lock.json   # clean slate
-          npm install
-          npm install --no-save lightningcss-linux-x64-gnu
-
-      - name: Verify binary (for debugging)
-        run: ls -la node_modules/lightningcss-linux-x64-gnu/
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      - name: Build Hugo site
-        env:
-          HUGO_ENVIRONMENT: production
-        run: hugo --minify
-
-      - name: Deploy to VPS
+      - name: Deploy to VPS via rsync
         uses: burnett01/rsync-deployments@5.2
         with:
           switches: -avzr --delete
-          path: public/
+          path: public/                  # ← Only the already-built folder
           remote_path: /var/www/levifackler.io/
           remote_host: ${{ secrets.VPS_HOST }}
           remote_user: ${{ secrets.VPS_USER }}
