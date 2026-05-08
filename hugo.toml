@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'Levi Fackler | Hacker-Chic Resume'
 theme = 'frosted-terminal'
 
+[security.node]
+disable = true
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -14,6 +17,3 @@ theme = 'frosted-terminal'
     lineNumbersInTable = true
     noClasses = false
     style = 'monokai'
-
-[security.node]
-  disable = true

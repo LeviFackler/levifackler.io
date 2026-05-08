@@ -3,7 +3,7 @@ name: Deploy Hugo Site
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:   # Allows manual trigger from GitHub
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -13,27 +13,29 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: true   # if your theme is a submodule
+          submodules: true
 
-      - name: Setup Node.js (for Tailwind v4 + PostCSS)
+      - name: Setup Node.js 22 (newer, avoids deprecation)
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
-      - name: Install Node dependencies + fix LightningCSS for Linux
+      - name: Install dependencies + LightningCSS (Linux compatible)
         run: |
           npm ci --include=optional
           npm install --no-save lightningcss-linux-x64-gnu
 
-      - name: Setup Hugo
+      - name: Setup Hugo (latest extended)
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.161.1'   # or latest
+          hugo-version: 'latest'
           extended: true
 
       - name: Build Hugo site
-        run: hugo --minify --environment production
+        env:
+          HUGO_ENVIRONMENT: production
+        run: hugo --minify
 
       - name: Deploy to VPS via rsync
         uses: burnett01/rsync-deployments@5.2
