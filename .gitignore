@@ -1,0 +1,10 @@
+# Hugo default output
+public/
+resources/
+.hugo_build.lock
+
+# Node dependencies
+node_modules/
+
+# OS files
+.DS_Store

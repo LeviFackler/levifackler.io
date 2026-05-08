@@ -64,11 +64,15 @@ Tone: Professional, technically precise, and helpful.
 Instruction: Prioritize accessibility (A11y) even within the terminal aesthetic to ensure screen readers can navigate the "interactive" components.
 
 Implementation To-Do List (Next Steps)
-[ ] Initialize Hugo project with a blank custom theme.
+[x] Initialize Hugo project with a blank custom theme.
 
-[ ] Create the baseof.html and list.html layouts to support the Floating Dock.
+[x] Create the baseof.html and list.html layouts to support the Floating Dock.
 
-[ ] Develop the "Frosted Terminal" CSS component.
+[x] Develop the "Frosted Terminal" CSS component.
+
+[x] Fix broken links and section headers.
+
+[x] Automate build and deployment via GitHub Actions.
 
 [ ] Script the interactive "HR-friendly" CLI simulation for the landing page.
 
