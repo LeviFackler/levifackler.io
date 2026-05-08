@@ -10,23 +10,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: true
 
-      - name: Setup Node.js 22 (newer, avoids deprecation)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: 'npm'
 
-      - name: Install dependencies + LightningCSS (Linux compatible)
+      - name: Install dependencies + Force LightningCSS Linux binary
         run: |
-          npm ci --include=optional
+          rm -rf node_modules package-lock.json   # clean slate
+          npm install
           npm install --no-save lightningcss-linux-x64-gnu
 
-      - name: Setup Hugo (latest extended)
+      - name: Verify binary (for debugging)
+        run: ls -la node_modules/lightningcss-linux-x64-gnu/
+
+      - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
@@ -37,7 +41,7 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: hugo --minify
 
-      - name: Deploy to VPS via rsync
+      - name: Deploy to VPS
         uses: burnett01/rsync-deployments@5.2
         with:
           switches: -avzr --delete
