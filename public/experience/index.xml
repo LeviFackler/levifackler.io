@@ -1,33 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Experience on Levi Fackler | Hacker-Chic Resume</title>
-    <link>http://localhost:1313/experience/</link>
-    <description>Recent content in Experience on Levi Fackler | Hacker-Chic Resume</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 21 Apr 2026 12:11:45 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/experience/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Family First Credit Union</title>
-      <link>http://localhost:1313/experience/family-first/</link>
-      <pubDate>Tue, 21 Apr 2026 12:11:45 -0400</pubDate>
-      <guid>http://localhost:1313/experience/family-first/</guid>
-      <description>&lt;h2 id=&#34;it-specialist&#34;&gt;IT Specialist&lt;/h2&gt;&#xA;&lt;p&gt;As the IT Specialist my primary duties revolved around desktop support.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Installed and Imaged 30 new PCs to facilitate an upgrade from Windows 10 to Windows 11.&lt;/li&gt;&#xA;&lt;li&gt;Administered Portico (Core Banking) product for all staff.&lt;/li&gt;&#xA;&lt;li&gt;Onboarded and Offboarded users for AD and all software systems.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;What happens if I write text outside the lines?&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Textron Systems</title>
-      <link>http://localhost:1313/experience/textron-systems/</link>
-      <pubDate>Fri, 01 Mar 2024 12:12:00 -0400</pubDate>
-      <guid>http://localhost:1313/experience/textron-systems/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>MAG Aerospace</title>
-      <link>http://localhost:1313/experience/mag-aerospace/</link>
-      <pubDate>Tue, 01 Mar 2022 12:12:12 -0400</pubDate>
-      <guid>http://localhost:1313/experience/mag-aerospace/</guid>
-      <description></description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Experience on Levi Fackler | Hacker-Chic Resume</title><link>https://levifackler.io/experience/</link><description>Recent content in Experience on Levi Fackler | Hacker-Chic Resume</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 21 Apr 2026 12:11:45 -0400</lastBuildDate><atom:link href="https://levifackler.io/experience/index.xml" rel="self" type="application/rss+xml"/><item><title>Family First Credit Union</title><link>https://levifackler.io/experience/family-first/</link><pubDate>Tue, 21 Apr 2026 12:11:45 -0400</pubDate><guid>https://levifackler.io/experience/family-first/</guid><description>&lt;h2 id="it-specialist"&gt;IT Specialist&lt;/h2&gt;
+&lt;p&gt;As the IT Specialist my primary duties revolved around desktop support.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Installed and Imaged 30 new PCs to facilitate an upgrade from Windows 10 to Windows 11.&lt;/li&gt;
+&lt;li&gt;Administered Portico (Core Banking) product for all staff.&lt;/li&gt;
+&lt;li&gt;Onboarded and Offboarded users for AD and all software systems.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What happens if I write text outside the lines?&lt;/p&gt;</description></item><item><title>Textron Systems</title><link>https://levifackler.io/experience/textron-systems/</link><pubDate>Fri, 01 Mar 2024 12:12:00 -0400</pubDate><guid>https://levifackler.io/experience/textron-systems/</guid><description/></item><item><title>MAG Aerospace</title><link>https://levifackler.io/experience/mag-aerospace/</link><pubDate>Tue, 01 Mar 2022 12:12:12 -0400</pubDate><guid>https://levifackler.io/experience/mag-aerospace/</guid><description/></item></channel></rss>

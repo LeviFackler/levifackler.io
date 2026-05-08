@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss ./assets/css/main.css -o ./assets/css/main.min.css --env production"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,9 @@
     "postcss": "^8.5.10",
     "postcss-cli": "^11.0.1",
     "tailwindcss": "^4.2.4"
+  },
+  "optionalDependencies": {
+    "lightningcss-linux-x64-gnu": "^1.29.2",
+    "lightningcss-linux-x64-musl": "^1.29.2"
   }
 }
