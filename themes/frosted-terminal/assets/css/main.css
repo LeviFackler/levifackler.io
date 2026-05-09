@@ -6,6 +6,16 @@
   --color-terminal-black: #0d0d0d;
 }
 
+@layer base {
+  body {
+    @apply antialiased selection:bg-hacker-green selection:text-black bg-terminal-black text-white;
+    /* Optimize background rendering */
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -13,7 +23,16 @@
 
 @layer components {
   .glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+    /* Optimized Glassmorphism: reduced blur and improved alpha for performance */
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
+    
+    /* Hardware acceleration hints to prevent freezing on Windows/Chrome */
+    transform: translateZ(0);
+    will-change: backdrop-filter;
   }
   
   .terminal-text {

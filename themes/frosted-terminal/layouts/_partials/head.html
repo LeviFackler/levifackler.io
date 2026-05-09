@@ -1,6 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
-{{ $style := resources.Get "css/main.css" | postCSS }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+<link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | absURL }}">
+{{ $style := resources.Get "css/main.css" | postCSS | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
 {{ partial "seo.html" . }}
